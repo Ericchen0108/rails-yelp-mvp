@@ -12,10 +12,10 @@ Restaurant.destroy_all
 
 5.times do
     restaurant = Restaurant.new(
-       name: ['Restaurant1', 'Restaurant2', 'Restaurant3'].sample,
+       name: Faker::Restaurant.name,
        phone_number: ['123456789', '0987654321', '234567853'].sample,
        address: ['Melbourne', 'Taipei', 'Kyoto'].sample,
-       category: ["chinese", "italian", "japanese", "french", "belgian"].sample
+       category: ["chinese", "italian", "japanese", "french"].sample
     )
     restaurant.save!
 
